@@ -26,7 +26,7 @@ const Signup = ({ setIsLoggedIn, setUser }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8082/api/user/register",
+        "https://civicconnect-backend-cn1d.onrender.com/api/user/register",
         formData
       );
 

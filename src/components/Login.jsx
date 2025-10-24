@@ -19,7 +19,7 @@ const Login = ({ setIsLoggedIn, setUser }) => {
     setMessage({ text: "", type: "" });
 
     try {
-      const res = await axios.post("http://localhost:8082/api/auth/login", formData);
+      const res = await axios.post("https://civicconnect-backend-cn1d.onrender.com/api/auth/login", formData);
 
       if (res.data) {
         localStorage.setItem("user", JSON.stringify(res.data));

@@ -23,7 +23,7 @@ const AddCase = ({ user }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8082/api/case/add?userId=${user.id}`,
+        `https://civicconnect-backend-cn1d.onrender.com/api/case/add?userId=${user.id}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

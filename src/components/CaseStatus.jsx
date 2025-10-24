@@ -13,14 +13,14 @@ const CaseStatus = () => {
 
   const fetchCases = () => {
     axios
-      .get("http://localhost:8082/api/case/all")
+      .get("https://civicconnect-backend-cn1d.onrender.com/api/case/all")
       .then((res) => setCases(res.data))
       .catch((err) => console.error("Error fetching cases:", err));
   };
 
   const updateStatus = (id, newStatus) => {
     axios
-      .put(`http://localhost:8082/api/case/updateStatus/${id}`, newStatus, {
+      .put(`https://civicconnect-backend-cn1d.onrender.com/api/case/updateStatus/${id}`, newStatus, {
         headers: { "Content-Type": "text/plain" },
       })
       .then(() => {
@@ -34,7 +34,7 @@ const CaseStatus = () => {
   const deleteCase = (id) => {
     if (!window.confirm("Are you sure you want to delete this case?")) return;
     axios
-      .delete(`http://localhost:8082/api/case/delete/${id}`)
+      .delete(`https://civicconnect-backend-cn1d.onrender.com/api/case/delete/${id}`)
       .then(() => setCases(cases.filter((c) => c.id !== id)))
       .catch((err) => console.error("Error deleting case:", err));
   };
@@ -44,7 +44,7 @@ const CaseStatus = () => {
     if (!review?.trim()) return;
 
     axios
-      .post(`http://localhost:8082/api/case/addReview/${id}`, { review })
+      .post(`https://civicconnect-backend-cn1d.onrender.com/api/case/addReview/${id}`, { review })
       .then(() => {
         alert("Review added successfully");
         setReviewText({ ...reviewText, [id]: "" });

@@ -14,14 +14,14 @@ const Profile = ({ user }) => {
 
   const fetchCases = () => {
     axios
-      .get(`http://localhost:8082/api/case/user/${user.id}`)
+      .get(`https://civicconnect-backend-cn1d.onrender.com/api/case/user/${user.id}`)
       .then(res => setCases(res.data))
       .catch(() => {});
   };
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8082/api/case/delete/${id}`)
+      .delete(`https://civicconnect-backend-cn1d.onrender.com/api/case/delete/${id}`)
       .then(() => {
         setCases(cases.filter(c => c.id !== id));
         setToast("Case successfully deleted");
