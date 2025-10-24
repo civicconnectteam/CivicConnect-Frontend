@@ -1,0 +1,185 @@
+/* Signup.css */
+
+/* Center the signup container */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* minus navbar height */
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.signup-container h2 {
+  font-size: 2.5rem;
+  color: #00e0ff;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.6);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Styling */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(15, 32, 39, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 224, 255, 0.2);
+  box-sizing: border-box;
+}
+
+/* Inputs, Selects, Buttons unified */
+.signup-form input,
+.signup-form select,
+.signup-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Inputs & Selects specific */
+.signup-form input,
+.signup-form select {
+  border: 1px solid #00e0ff;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  border-color: #00e0ff;
+  box-shadow: 0 0 8px #00e0ff;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Button specific */
+.signup-form button {
+  background: #00e0ff;
+  color: #0f2027;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background: #00c4e0;
+  box-shadow: 0 0 10px #00e0ff;
+}
+
+/* Success & Error Messages */
+.signup-message {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  max-width: 400px;
+}
+
+.signup-message.success {
+  background: rgba(0, 255, 153, 0.2);
+  color: #00ff99;
+  border: 1px solid #00ff99;
+}
+
+.signup-message.error {
+  background: rgba(255, 92, 92, 0.2);
+  color: #ff5c5c;
+  border: 1px solid #ff5c5c;
+}
+
+.login-redirect {
+  margin-top: 12px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.login-link {
+  color: #00e0ff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+/* Wrapper for select */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Select styling */
+.select-wrapper select {
+  border: 1px solid #00e0ff;
+  background: rgba(15, 32, 39, 0.85);
+  color: #00e0ff;
+  padding: 12px 35px 12px 12px; /* right padding for arrow */
+  border-radius: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+}
+
+/* Focus state */
+.select-wrapper select:focus {
+  border-color: #00c4e0;
+  box-shadow: 0 0 8px #00e0ff;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Custom arrow */
+.select-wrapper::after {
+  content: '▼';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #00e0ff;
+  font-size: 0.7rem;
+}
+
+/* Options */
+.select-wrapper select option {
+  background: #0f2027;
+  color: #00e0ff;
+}
+
+.select-wrapper select option:hover {
+  background: #203a43;
+  color: #00ffff;
+}
+
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,92 @@
+.footer {
+  width: 100vw;
+  background: rgba(15, 32, 39, 0.9); /* slightly more transparent */
+  border-top: 2px solid #00e0ff;
+  box-shadow: 0 -4px 15px rgba(0, 224, 255, 0.15);
+  color: #cfd8dc;
+  text-align: center;
+  margin-top: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00e0ff;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.6);
+  margin: 0;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #b0bec5;
+  max-width: 600px;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00e0ff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #90a4ae;
+}
+
+.footer-bottom .bottom-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+}
+
+.footer-bottom .bottom-links a {
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1rem; /* increased from default */
+  padding-bottom: 20px;
+}
+
+.footer-bottom .bottom-links a:hover {
+  color: #00e0ff;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,139 @@
+/* Login.css */
+
+/* Center the login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* minus navbar height */
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.login-container h2 {
+  font-size: 2.5rem;
+  color: #00e0ff;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.6);
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(15, 32, 39, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 224, 255, 0.2);
+}
+
+/* Labels */
+.login-form label {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #cfd8dc;
+}
+
+/* Inputs */
+.login-form input {
+  padding: 10px 12px;
+  border: 1px solid #00e0ff;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #00e0ff;
+  box-shadow: 0 0 8px #00e0ff;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button */
+.login-form button {
+  padding: 12px;
+  font-size: 1.1rem;
+  color: #0f2027;
+  background: #00e0ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #00c4e0;
+  box-shadow: 0 0 10px #00e0ff;
+}
+
+.signup-link {
+  margin-top: 15px;
+  text-align: center;
+  color: #cfd8dc;
+  font-size: 0.95rem;
+}
+
+.signup-link span {
+  color: #00e0ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signup-link span:hover {
+  color: #00aabb;
+}
+
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-message {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.4s ease;
+}
+
+.login-message.success {
+  color: #00e0ff;
+}
+
+.login-message.error {
+  color: #ff4c4c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
